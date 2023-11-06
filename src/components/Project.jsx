@@ -7,18 +7,18 @@ function Project({ projects }) {
     <div className="container">
       <div className="row">
       {projects.map((project) => {
-        const { title, githubLink, deployedLink, image, description } = project;
+        const { title, github, deployed, image, description } = project;
         return (
           <div className="col-md-6 col-lg-6 d-flex justify-content-center" key={title}>
-            <Card className="mb-5 mt-3" style={{ width: '18rem', border: '1px white solid', background: 'black' }}>
+            <Card className="mb-5 mt-3" >
               <Card.Img variant="top" src={image} />
               <Card.Body>
-                <Card.Title style={{ color: 'lightslategrey' }}>{title}</Card.Title>
+                <Card.Title >{title}</Card.Title>
                 <Card.Text>
                   {description}
                 </Card.Text>
-                <Button className="mb-2" href={deployedLink} target="_blank" variant="primary">View App</Button>
-                <Button href={githubLink} target="_blank" variant="secondary">View Repo</Button>
+                <Button href={deployed} target="_blank" variant="primary">App</Button>
+                <Button href={github} target="_blank" variant="secondary">Repo</Button>
               </Card.Body>
             </Card>
           </div>
