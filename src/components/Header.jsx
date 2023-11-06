@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
+    const currentPage = useLocation().pathname
     return (
         <>
-            <div className="mb-5 d-flex justify-content-between name_header">
-                <HeaderAnimation />
+            <div className="mb-5 d-flex justify-content-between fixed-top">
                 <ul className="flex-row nav nav-tabs">
                     <li className="nav-fill nav-item">
                         <Link

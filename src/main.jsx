@@ -5,10 +5,13 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import About from './pages/AboutPage/About.jsx';
 import Contact from './pages/ContactPage/Contact.jsx';
 import Portfolio from './pages/PortfolioPage/Portfolio.jsx';
 import Resume from './pages/ResumePage/Resume.jsx';
+import ErrorPage from './pages/ErrorPage/Error.jsx';
 
 
 const router = createBrowserRouter([
